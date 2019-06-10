@@ -1,0 +1,59 @@
+<!-- <div class="container mt-5">
+  <div class="jumbotron">
+    <h1> This is Example 1</h1>     
+  </div>
+</div> -->
+
+
+
+
+<div *ngIf="view" class="container mt-5">
+    <h2>Table 1</h2>         
+    <table class="table table-bordered table-dark">
+      <thead>
+        <tr>
+          <th>S.No</th>
+          <th>Firstname</th>
+          <th>Lastname</th>
+          <th>Email</th>
+        </tr>
+      </thead>
+      <tbody *ngFor="let item of bio;let i=index">
+        <tr>
+          <td>{{i+1}}</td>
+          <td>{{item.firstName}}</td>
+          <td>{{item.lastName}}</td>
+          <td>{{item.email}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div *ngIf="!view" class="container mt-5">
+      <h2>Table 2</h2>            
+      <table class="table table-bordered table-dark">
+        <thead>
+          <tr>
+            <th>S.No</th>
+            <th>Project Name</th>
+            <th>Employer</th>
+            <th>Awards</th>
+          </tr>
+        </thead>
+        <tbody *ngFor="let item of employees;let i=index">
+          <tr>
+            <td>{{i+1}}</td>
+            <td>{{item.projectName}}</td>
+            <td>{{item.employer}}</td>
+            <td>{{item.awards}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+<div class="container">
+  <div class="col-md-6">
+    <h2><button  type="button" class="btn btn-success btn-sm" (click)="showTable1()" >Table 1</button></h2> 
+  </div>
+  <div class="col-md-6">
+      <h2><button  type="button" class="btn btn-success btn-sm" (click)="showTable2()" >Table 2</button></h2> 
+    </div>
