@@ -1,13 +1,20 @@
 <div class="container">
-        <!-- <h1>Hello World!</h1>
-        <p>Resize the browser window to see the effect.</p>
-        <p>The columns will automatically stack on top of each other when the screen is less than 768px wide.</p> -->
-        <div class="row">
-          <div class="col-sm-3"><button type="button" class="btn btn-primary" routerLink="/example1">Example 1</button></div>
-          <div class="col-sm-3" ><button type="button" class="btn btn-primary" routerLink="/example2">Example 2</button></div>
-          <div class="col-sm-3" ><button type="button" class="btn btn-primary"routerLink="/example3">Example 3</button></div>
-          <div class="col-sm-3" ><button type="button" class="btn btn-primary" routerLink="/example4">Example 4</button></div>
-        </div>
-        <div></div>
-      </div>
+     
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+      <ul class="navbar-nav">
+        <li class="nav-item ">
+          <a class="nav-link" routerLink="/example1">Example-1</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/example2">Example-2</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/example3">Example-3</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/example4">Example-4</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
 <router-outlet></router-outlet>
